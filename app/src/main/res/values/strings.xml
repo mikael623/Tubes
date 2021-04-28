@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Tubes</string>
+    <string name="title_activity_login">LoginActivity</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="judul">Sign in</string>
+    <string name="forget_password">Forget Password</string>
+    <string name="new_user">I’m a new user. Sign Up</string>
+
 </resources>
