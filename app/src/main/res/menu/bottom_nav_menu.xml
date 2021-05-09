@@ -3,27 +3,21 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/home"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Home"
-        app:cnb_backgroundColor="@color/blue"
-        app:cnb_iconColor="@color/white" />
+        android:icon="@drawable/ic_home"
+        android:title="Home" />
     <item
         android:id="@+id/note"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Note"
-        app:cnb_backgroundColor="@color/blue"
-        app:cnb_iconColor="@color/white" />
+        android:icon="@drawable/ic_note"
+        android:title="Note" />
+    <item
+        android:id="@+id/placeholder"
+        android:title="" />
     <item
         android:id="@+id/quiz"
-        android:enabled="true"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Quiz"
-        app:cnb_backgroundColor="@color/blue"
-        app:cnb_iconColor="@color/white" />
+        android:icon="@drawable/ic_assignment"
+        android:title="Quiz" />
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/ic_launcher_foreground"
-        android:title="Profile"
-        app:cnb_backgroundColor="@color/blue"
-        app:cnb_iconColor="@color/white" />
+        android:icon="@drawable/ic_profile"
+        android:title="Profile" />
 </menu>

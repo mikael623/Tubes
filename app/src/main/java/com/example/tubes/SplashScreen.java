@@ -5,21 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
+import android.widget.Button;
 
 public class SplashScreen extends AppCompatActivity {
-    private int load = 3000;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash_screen);
 
-        new Handler().postDelayed(new Runnable() {
+        Button enter = findViewById(R.id.btn_enter);
+        enter.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
+            public void onClick(View v) {
                 Intent home = new Intent(SplashScreen.this, Login.class);
                 startActivity(home);
             }
-        },load);
+        });
     }
 }
