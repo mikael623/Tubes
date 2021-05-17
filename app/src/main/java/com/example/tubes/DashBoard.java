@@ -7,13 +7,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
-import com.example.tubes.fragment.FragmentHome;
 import com.example.tubes.fragment.FragmentMateri;
 import com.example.tubes.fragment.FragmentNote;
 import com.example.tubes.fragment.FragmentProfile;
 import com.example.tubes.fragment.FragmentQuiz;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.ismaeldivita.chipnavigation.ChipNavigationBar;
 
 public class DashBoard extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
@@ -28,7 +26,7 @@ public class DashBoard extends AppCompatActivity implements BottomNavigationView
         bottomNav.setBackground(null);
         bottomNav.getMenu().getItem(2).setEnabled(false);
 
-        loadFragment(new FragmentHome());
+        loadFragment(new FragmentMateri());
 // beri listener pada saat item/menu bottomnavigation terpilih
         bottomNav.setOnNavigationItemSelectedListener(this);
 
@@ -49,7 +47,7 @@ public class DashBoard extends AppCompatActivity implements BottomNavigationView
         Fragment fragment = null;
         switch (item.getItemId()){
             case R.id.home:
-                fragment = new FragmentHome();
+                fragment = new FragmentMateri();
                 break;
             case R.id.note:
                 fragment = new FragmentNote();

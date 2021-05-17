@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".fragment.FragmentMateri">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -45,6 +45,7 @@
             android:layout_marginBottom="24dp"
             android:background="@drawable/bg_list"
             android:orientation="vertical"
+            android:layout_marginTop="8dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,7 +54,7 @@
             <EditText
                 android:id="@+id/search"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:drawableLeft="@drawable/ic_search"
@@ -68,7 +69,7 @@
                 android:id="@+id/tV_pilihan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="16dp"
+                android:layout_marginLeft="25dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="8dp"
@@ -82,16 +83,16 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_list_materi"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="16dp"
                 android:layout_marginRight="16dp"
                 android:clipToPadding="false"
-                android:paddingBottom="70dp"
                 android:scrollbarStyle="outsideOverlay"
                 app:layout_constraintTop_toBottomOf="@+id/tV_pilihan" />
 
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 </FrameLayout>

@@ -4,12 +4,15 @@ import android.widget.ImageView;
 
 public class MateriData {
     int thumbnail;
-    String judul, isi;
+    String judul, jumlah;
 
-    public MateriData(int thumbnail, String judul, String isi) {
+    public MateriData() {
+    }
+
+    public MateriData(int thumbnail, String judul, String jumlah) {
         this.thumbnail = thumbnail;
         this.judul = judul;
-        this.isi = isi;
+        this.jumlah = jumlah;
     }
 
     public int getThumbnail() {
@@ -28,11 +31,11 @@ public class MateriData {
         this.judul = judul;
     }
 
-    public String getIsi() {
-        return isi;
+    public String getJumlah() {
+        return jumlah;
     }
 
-    public void setIsi(String isi) {
-        this.isi = isi;
+    public void setJumlah(String jumlah) {
+        this.jumlah = jumlah;
     }
 }

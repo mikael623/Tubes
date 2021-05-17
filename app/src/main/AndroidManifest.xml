@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tubes">
-        <activity android:name=".Login" >
-        </activity>
+        <activity android:name=".DetailMateri"></activity>
+        <activity android:name=".JudulMateri" />
+        <activity android:name=".Login" />
         <activity android:name=".MainActivity4" />
         <activity android:name=".Register" />
-        <activity android:name=".DashBoard" android:theme="@style/Dashboard"/>
+        <activity
+            android:name=".DashBoard"
+            android:theme="@style/Dashboard" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
