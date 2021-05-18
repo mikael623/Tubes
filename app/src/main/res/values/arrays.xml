@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="category_title" />
+    <string-array name="category_ID" />
+    <string-array name="colors" />
+</resources>
