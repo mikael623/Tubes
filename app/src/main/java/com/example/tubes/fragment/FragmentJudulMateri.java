@@ -1,4 +1,4 @@
-package com.example.tubes;
+package com.example.tubes.fragment;
 
 import android.os.Bundle;
 
@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.tubes.R;
 import com.example.tubes.adapter.JudulMateriAdapter;
 import com.example.tubes.data.JudulMateriData;
 

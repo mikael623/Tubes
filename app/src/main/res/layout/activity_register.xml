@@ -48,14 +48,15 @@
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="32dp"
         android:layout_marginRight="24dp"
         android:background="@drawable/bg_edittext"
+        android:elevation="4dp"
         android:hint="@string/fullname"
         android:inputType="text"
-        android:paddingLeft="24dp"
+        android:padding="16dp"
         android:selectAllOnFocus="true"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
@@ -66,16 +67,17 @@
     <EditText
         android:id="@+id/email"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="24dp"
         android:background="@drawable/bg_edittext"
+        android:elevation="4dp"
         android:hint="@string/prompt_email"
-        android:textSize="18sp"
         android:inputType="textEmailAddress"
-        android:paddingLeft="24dp"
+        android:padding="16dp"
         android:selectAllOnFocus="true"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/username" />
@@ -83,16 +85,17 @@
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
         android:layout_marginTop="30dp"
         android:layout_marginRight="24dp"
         android:background="@drawable/bg_edittext"
+        android:elevation="4dp"
         android:hint="@string/prompt_password"
-        android:textSize="18sp"
         android:inputType="textPassword"
-        android:paddingLeft="24dp"
+        android:padding="16dp"
         android:selectAllOnFocus="true"
+        android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/email" />
@@ -100,13 +103,15 @@
     <Button
         android:id="@+id/register"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
-        android:layout_marginRight="24dp"
         android:layout_marginTop="40dp"
+        android:layout_marginRight="24dp"
         android:background="@drawable/btn_yellow"
         android:gravity="center"
         android:text="Sign Up"
+        android:backgroundTint="@null"
+        app:backgroundTint="@null"
         android:textColor="@color/black"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -140,7 +145,5 @@
             android:textStyle="bold" />
 
     </LinearLayout>
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

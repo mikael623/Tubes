@@ -18,7 +18,7 @@
                 android:id="@+id/constraintLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/bg_profile"
+                android:background="@drawable/bg_user"
                 android:elevation="5dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -89,6 +89,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/textView2">
 
                 <LinearLayout
+                    android:id="@+id/class7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -110,13 +111,13 @@
                         android:background="@drawable/bg_class2"
                         android:gravity="center"
                         android:padding="8dp"
-                        android:text="7 Class"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:text="7th Grade"
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/class8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -138,13 +139,13 @@
                         android:background="@drawable/bg_class2"
                         android:gravity="center"
                         android:padding="8dp"
-                        android:text="8 Class"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:text="8th Grade"
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/class9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="8dp"
@@ -166,28 +167,12 @@
                         android:background="@drawable/bg_class2"
                         android:gravity="center"
                         android:padding="8dp"
-                        android:text="9 Class"
-                        android:textColor="@color/black"
-                        android:textSize="18sp" />
+                        android:text="9th Grade"
+                        android:textColor="@color/black" />
 
                 </LinearLayout>
 
             </LinearLayout>
-
-            <com.applandeo.materialcalendarview.CalendarView
-                android:id="@+id/calendarView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_margin="24dp"
-                android:layout_marginTop="24dp"
-                app:headerColor="@color/yellow"
-                android:elevation="5dp"
-                app:headerLabelColor="@color/black"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-                app:todayLabelColor="@color/yellow" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

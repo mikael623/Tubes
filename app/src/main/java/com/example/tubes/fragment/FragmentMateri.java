@@ -18,9 +18,7 @@ import java.util.ArrayList;
 
 public class FragmentMateri extends Fragment {
 
-    private RecyclerView rV_materi;
-    private ArrayList<MateriData> listmateri = new ArrayList();
-    private MateriAdapter adaptermateri;
+
 
 
     public FragmentMateri() {
@@ -32,25 +30,7 @@ public class FragmentMateri extends Fragment {
                              Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_materi, container, false);
-        rV_materi = view.findViewById(R.id.rv_list_materi);
 
-        listmateri.add(new MateriData(R.drawable.ic_logo, "Vocabulary", "12"));
-        listmateri.add(new MateriData(R.drawable.ic_logo, "Vocabulary", "12"));
-        listmateri.add(new MateriData(R.drawable.ic_logo, "Vocabulary", "12"));
-        listmateri.add(new MateriData(R.drawable.ic_logo, "Vocabulary", "12"));
-        listmateri.add(new MateriData(R.drawable.ic_logo, "Vocabulary", "12"));
-        listmateri.add(new MateriData(R.drawable.ic_logo, "Vocabulary", "12"));
-        listmateri.add(new MateriData(R.drawable.ic_logo, "Vocabulary", "12"));
-        listmateri.add(new MateriData(R.drawable.ic_logo, "Vocabulary", "12"));
-        listmateri.add(new MateriData(R.drawable.ic_logo, "Vocabulary", "12"));
-        listmateri.add(new MateriData(R.drawable.ic_logo, "Vocabulary", "12"));
-        listmateri.add(new MateriData(R.drawable.ic_logo, "Vocabulary", "12"));
-
-        adaptermateri = new MateriAdapter(listmateri, getContext());
-
-        LinearLayoutManager lm = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
-        rV_materi.setLayoutManager(lm);
-        rV_materi.setAdapter(adaptermateri);
 
         return view;
     }

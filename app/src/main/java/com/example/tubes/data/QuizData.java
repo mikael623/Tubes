@@ -1,21 +1,11 @@
 package com.example.tubes.data;
 
 public class QuizData {
-    int thumbnail;
     String judul, isi;
 
-    public QuizData(int thumbnail, String judul, String isi) {
-        this.thumbnail = thumbnail;
+    public QuizData(String judul, String isi) {
         this.judul = judul;
         this.isi = isi;
-    }
-
-    public int getThumbnail() {
-        return thumbnail;
-    }
-
-    public void setThumbnail(int thumbnail) {
-        this.thumbnail = thumbnail;
     }
 
     public String getJudul() {

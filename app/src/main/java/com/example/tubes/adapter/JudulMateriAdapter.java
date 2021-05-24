@@ -8,15 +8,11 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tubes.DetailMateri;
-import com.example.tubes.FragmentJudulMateri;
-import com.example.tubes.JudulMateri;
 import com.example.tubes.R;
 import com.example.tubes.data.JudulMateriData;
-import com.example.tubes.data.MateriData;
 
 import java.util.ArrayList;
 

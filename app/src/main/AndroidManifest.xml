@@ -9,14 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Tubes">
-        <activity android:name=".DetailMateri"></activity>
+        <activity android:name=".NewNote"></activity>
+        <activity android:name=".Note" />
+        <activity android:name=".DetailMateri" />
         <activity android:name=".JudulMateri" />
         <activity android:name=".Login" />
-        <activity android:name=".MainActivity4" />
+        <activity android:name=".Materi" />
         <activity android:name=".Register" />
-        <activity android:name=".CategoryActivity"/>
-        <activity android:name=".QuestionActivity"/>
-        <activity android:name=".HasilQuiz"/>
+        <activity android:name=".CategoryActivity" />
+        <activity android:name=".QuestionActivity" />
+        <activity android:name=".HasilQuiz" />
         <activity
             android:name=".DashBoard"
             android:theme="@style/Dashboard" />
