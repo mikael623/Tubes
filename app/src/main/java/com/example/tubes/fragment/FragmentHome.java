@@ -14,6 +14,8 @@ import android.widget.Toast;
 
 import com.example.tubes.JudulMateri;
 import com.example.tubes.Materi;
+import com.example.tubes.MateriGrade8;
+import com.example.tubes.MateriGrade9;
 import com.example.tubes.R;
 import com.google.android.material.shape.MarkerEdgeTreatment;
 
@@ -45,14 +47,14 @@ public class FragmentHome extends Fragment {
         class8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Materi.class);
+                Intent intent = new Intent(getActivity(), MateriGrade8.class);
                 startActivity(intent);
             }
         });
         class9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Materi.class);
+                Intent intent = new Intent(getActivity(), MateriGrade9.class);
                 startActivity(intent);
             }
         });

@@ -21,60 +21,45 @@ import com.example.tubes.data.CategoryItem;
 import java.util.ArrayList;
 
 
-public class CategoryAdapter extends ArrayAdapter<CategoryItem> {
+public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.CategoryViewHolder> {
 
     public static final String CATEGORY_COLOR = "CategoryColor";
     public static final String CATEGORY_ID = "CategoryID";
     private Context mContext;
     private ArrayList<CategoryItem> mCategoryItems;
 
-    public CategoryAdapter(@NonNull Context context, int resource, @NonNull ArrayList<CategoryItem> categoryItems) {
-        super(context, resource, categoryItems);
-        this.mContext = context;
-        this.mCategoryItems = categoryItems;
-    }
-
-    @Override
-    public int getCount() {
-        return super.getCount();
+    public CategoryAdapter(Context mContext, ArrayList<CategoryItem> mCategoryItems) {
+        this.mContext = mContext;
+        this.mCategoryItems = mCategoryItems;
     }
 
     @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public CategoryViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(mContext).inflate(R.layout.list_category_quiz_item, parent, false);
+        return new CategoryViewHolder(view);
+    }
 
-        CategoryViewHolder categoryViewHolder;
-        final CategoryItem categoryItem = mCategoryItems.get(position);
+    @Override
+    public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
+        holder.categoryTitle.setText(mCategoryItems.get(position).getJudul());
+        holder.categoryImage.setImageResource(mCategoryItems.get(position).getImage());
+    }
 
-        if (convertView == null) {
-            convertView = LayoutInflater.from(mContext).inflate(R.layout.grid_view_item,parent, false);
-            categoryViewHolder = new CategoryViewHolder(convertView);
-            convertView.setTag(categoryViewHolder);
-        }
-        categoryViewHolder = (CategoryViewHolder) convertView.getTag();
-        categoryViewHolder.categoryImage.setBackgroundColor(categoryItem.getmBgColor());
-        categoryViewHolder.categoryTitle.setText(categoryItem.getmCategoryTitle());
-        categoryViewHolder.categoryImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent questionIntent = new Intent(mContext, QuestionActivity.class);
-                questionIntent.putExtra(CATEGORY_ID, categoryItem.getmCategoryID());
-                questionIntent.putExtra(CATEGORY_COLOR, categoryItem.getmBgColor());
-                mContext.startActivity(questionIntent);
-            }
-        });
-        return convertView;
+    @Override
+    public int getItemCount() {
+        return mCategoryItems.size();
     }
 
     static class CategoryViewHolder extends RecyclerView.ViewHolder {
-
         ImageView categoryImage;
         TextView categoryTitle;
 
         CategoryViewHolder(View itemView) {
             super(itemView);
-            categoryImage = itemView.findViewById(R.id.category_image);
-            categoryTitle = itemView.findViewById(R.id.category_title);
+            categoryImage = itemView.findViewById(R.id.imageList);
+            categoryTitle = itemView.findViewById(R.id.tv_judulNote);
         }
     }
+
 }

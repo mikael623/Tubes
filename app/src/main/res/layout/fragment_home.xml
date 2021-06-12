@@ -103,7 +103,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_margin="8dp"
-                        android:src="@drawable/ic_logo" />
+                        android:src="@drawable/ic_online_course" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -131,7 +131,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_margin="8dp"
-                        android:src="@drawable/ic_logo" />
+                        android:src="@drawable/ic_online_course" />
 
                     <TextView
                         android:layout_width="match_parent"
@@ -159,7 +159,7 @@
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:layout_margin="8dp"
-                        android:src="@drawable/ic_logo" />
+                        android:src="@drawable/ic_online_course" />
 
                     <TextView
                         android:layout_width="match_parent"

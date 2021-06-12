@@ -1,25 +1,27 @@
 package com.example.tubes.data;
 
 public class CategoryItem {
-    private int mBgColor;
-    private String mCategoryTitle;
-    private String mCategoryID;
+    private int image;
+    private String Judul;
 
-    public CategoryItem(int imageId, String categoryTitle, String categoryID) {
-        this.mBgColor = imageId;
-        this.mCategoryTitle = categoryTitle;
-        this.mCategoryID = categoryID;
+    public CategoryItem(int image, String judul) {
+        this.image = image;
+        Judul = judul;
     }
 
-    public int getmBgColor() {
-        return mBgColor;
+    public int getImage() {
+        return image;
     }
 
-    public String getmCategoryTitle() {
-        return mCategoryTitle;
+    public void setImage(int image) {
+        this.image = image;
     }
 
-    public String getmCategoryID() {
-        return mCategoryID;
+    public String getJudul() {
+        return Judul;
+    }
+
+    public void setJudul(String judul) {
+        Judul = judul;
     }
 }

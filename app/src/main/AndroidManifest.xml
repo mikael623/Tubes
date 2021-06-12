@@ -2,21 +2,27 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.tubes">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Tubes">
-        <activity android:name=".NewNote"></activity>
+        android:theme="@style/Theme.Tubes"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".MateriGrade9"></activity>
+        <activity android:name=".MateriGrade8" />
+        <activity android:name=".NewNote" />
         <activity android:name=".Note" />
         <activity android:name=".DetailMateri" />
         <activity android:name=".JudulMateri" />
         <activity android:name=".Login" />
         <activity android:name=".Materi" />
         <activity android:name=".Register" />
-        <activity android:name=".CategoryActivity" />
+        <activity android:name=".ListQuiz" />
         <activity android:name=".QuestionActivity" />
         <activity android:name=".HasilQuiz" />
         <activity

@@ -5,19 +5,10 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
 import com.example.tubes.adapter.MateriAdapter;
 import com.example.tubes.data.MateriData;
 
@@ -25,7 +16,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -35,9 +25,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
-import okhttp3.OkHttpClient;
-
-public class Materi extends AppCompatActivity {
+public class MateriGrade8 extends AppCompatActivity {
     private RecyclerView rV_materi;
     private List<MateriData> listmateri;
     private MateriAdapter adaptermateri;
@@ -50,7 +38,7 @@ public class Materi extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_materi);
+        setContentView(R.layout.activity_materi_grade_8);
         rV_materi = findViewById(R.id.rv_list_materi);
         listmateri = new ArrayList<>();
 
@@ -60,7 +48,7 @@ public class Materi extends AppCompatActivity {
     }
 
     public class GetData extends AsyncTask<String, String, String> {
-        ProgressDialog pb = new ProgressDialog(Materi.this);
+        ProgressDialog pb = new ProgressDialog(MateriGrade8.this);
 
         @Override
         protected void onPreExecute() {
@@ -114,11 +102,12 @@ public class Materi extends AppCompatActivity {
                     materiData.setSubjudul(jsonObject1.getString("submateri"));
                     materiData.setDeskripsi(jsonObject1.getString("isi_materi"));
                     listmateri.add(materiData);
+                    pb.setMessage("Successfully Loaded");
                     pb.dismiss();
 
                 }
             } catch (JSONException e) {
-                Toast.makeText(Materi.this, e.toString(), Toast.LENGTH_LONG).show();
+                Toast.makeText(MateriGrade8.this, e.toString(), Toast.LENGTH_LONG).show();
             }
             PutDataIntoRecyclerView (listmateri);
         }
@@ -131,5 +120,4 @@ public class Materi extends AppCompatActivity {
         rV_materi.setHasFixedSize(true);
         rV_materi.setAdapter(adaptermateri);
     }
-
 }

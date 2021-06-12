@@ -1,26 +1,53 @@
 package com.example.tubes.data;
 
+import android.os.Parcel;
+import android.os.Parcelable;
 import android.widget.ImageView;
 
-public class MateriData {
-    int thumbnail;
-    String judul, jumlah;
+public class MateriData implements Parcelable {
+    public String judul,subjudul,deskripsi;
 
     public MateriData() {
     }
 
-    public MateriData(int thumbnail, String judul, String jumlah) {
-        this.thumbnail = thumbnail;
+    public MateriData(String judul, String subjudul, String deskripsi) {
         this.judul = judul;
-        this.jumlah = jumlah;
+        this.subjudul = subjudul;
+        this.deskripsi = deskripsi;
     }
 
-    public int getThumbnail() {
-        return thumbnail;
+    protected MateriData(Parcel in) {
+        judul = in.readString();
+        subjudul = in.readString();
+        deskripsi = in.readString();
     }
 
-    public void setThumbnail(int thumbnail) {
-        this.thumbnail = thumbnail;
+    public static final Creator<MateriData> CREATOR = new Creator<MateriData>() {
+        @Override
+        public MateriData createFromParcel(Parcel in) {
+            return new MateriData(in);
+        }
+
+        @Override
+        public MateriData[] newArray(int size) {
+            return new MateriData[size];
+        }
+    };
+
+    public String getSubjudul() {
+        return subjudul;
+    }
+
+    public void setSubjudul(String subjudul) {
+        this.subjudul = subjudul;
+    }
+
+    public String getDeskripsi() {
+        return deskripsi;
+    }
+
+    public void setDeskripsi(String deskripsi) {
+        this.deskripsi = deskripsi;
     }
 
     public String getJudul() {
@@ -31,11 +58,15 @@ public class MateriData {
         this.judul = judul;
     }
 
-    public String getJumlah() {
-        return jumlah;
+    @Override
+    public int describeContents() {
+        return 0;
     }
 
-    public void setJumlah(String jumlah) {
-        this.jumlah = jumlah;
+    @Override
+    public void writeToParcel(Parcel dest, int flags) {
+        dest.writeString(judul);
+        dest.writeString(subjudul);
+        dest.writeString(deskripsi);
     }
 }

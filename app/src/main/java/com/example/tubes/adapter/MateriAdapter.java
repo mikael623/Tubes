@@ -2,6 +2,8 @@ package com.example.tubes.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,18 +13,22 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.tubes.DetailMateri;
 import com.example.tubes.JudulMateri;
+import com.example.tubes.Materi;
 import com.example.tubes.R;
 import com.example.tubes.data.MateriData;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.myViewHolder> {
 
-    ArrayList<MateriData> list;
+    List<MateriData> list;
     Context context;
 
-    public MateriAdapter(ArrayList<MateriData> list, Context context) {
+    public MateriAdapter(List<MateriData> list, Context context) {
         this.list = list;
         this.context = context;
     }
@@ -31,29 +37,28 @@ public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.myViewHold
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.list_materi, parent, false);
-        return new MateriAdapter.myViewHolder(view);
+        return new myViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull myViewHolder holder, int position) {
-        holder.judulMateri.setText(list.get(position).getJudul());
-        holder.jumlahMateri.setText(list.get(position).getJumlah());
-        holder.gambar.setImageResource(list.get(position).getThumbnail());
+//        holder.judulMateri.setText(list.get(position).judul);
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            holder.judulMateri.setText(Html.fromHtml(list.get(position).judul, Html.FROM_HTML_MODE_LEGACY));
+            holder.subjudul.setText(Html.fromHtml(list.get(position).subjudul, Html.FROM_HTML_MODE_LEGACY));
+            holder.deskripsi.setText(Html.fromHtml(list.get(position).deskripsi, Html.FROM_HTML_MODE_LEGACY));
+        } else {
+            holder.judulMateri.setText(Html.fromHtml(list.get(position).judul));
+            holder.subjudul.setText(Html.fromHtml(list.get(position).subjudul));
+            holder.deskripsi.setText(Html.fromHtml(list.get(position).deskripsi));
+        }
 
          holder.itemView.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
-//                 AppCompatActivity activity = (AppCompatActivity)v.getContext();
-//                 FragmentJudulMateri Materi = new FragmentJudulMateri();
-//                 activity.getSupportFragmentManager().beginTransaction().replace(R.id.rv_list_judul_materi, Materi).addToBackStack(null).commit();
-
-                 v.getContext().startActivity(new Intent(context, JudulMateri.class));
-
-//                 FragmentTransaction fragmentTransaction = activity.getSupportFragmentManager().beginTransaction();
-//                 fragmentTransaction.add(R.id.rv_list_judul_materi, Materi);
-//                 // relativelayout_for_fragment is inside the content_main.xml
-//                 fragmentTransaction.commit();
-
+                 Intent detail = new Intent(context, DetailMateri.class);
+                 detail.putExtra(DetailMateri.EXTRA, list.get(position));
+                 context.startActivity(detail);
              }
          });
     }
@@ -65,15 +70,13 @@ public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.myViewHold
 
     public class myViewHolder extends RecyclerView.ViewHolder {
 
-        TextView judulMateri;
-        TextView jumlahMateri;
-        ImageView gambar;
+        TextView judulMateri, deskripsi, subjudul;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             judulMateri = itemView.findViewById(R.id.tV_judulmateri);
-            jumlahMateri = itemView.findViewById(R.id.tV_jmlhmateri);
-            gambar = itemView.findViewById(R.id.iV_materi);
+            subjudul = itemView.findViewById(R.id.tV_subjudul);
+            deskripsi = itemView.findViewById(R.id.tV_desc);
         }
     }
 }
