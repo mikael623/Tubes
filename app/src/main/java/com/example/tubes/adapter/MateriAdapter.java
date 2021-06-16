@@ -7,18 +7,22 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.tubes.DetailMateri;
 import com.example.tubes.JudulMateri;
 import com.example.tubes.Materi;
 import com.example.tubes.R;
 import com.example.tubes.data.MateriData;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -53,6 +57,8 @@ public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.myViewHold
             holder.deskripsi.setText(Html.fromHtml(list.get(position).deskripsi));
         }
 
+        Glide.with(context).load(list.get(position).gambar).into(holder.gambar);
+
          holder.itemView.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
@@ -68,15 +74,22 @@ public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.myViewHold
         return list.size();
     }
 
+    public void filtered(ArrayList<MateriData> filterList) {
+        list = filterList;
+        notifyDataSetChanged();
+    }
+
     public class myViewHolder extends RecyclerView.ViewHolder {
 
         TextView judulMateri, deskripsi, subjudul;
+        ImageView gambar;
 
         public myViewHolder(@NonNull View itemView) {
             super(itemView);
             judulMateri = itemView.findViewById(R.id.tV_judulmateri);
             subjudul = itemView.findViewById(R.id.tV_subjudul);
             deskripsi = itemView.findViewById(R.id.tV_desc);
+            gambar = itemView.findViewById(R.id.iV_materi);
         }
     }
 }

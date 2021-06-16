@@ -1,7 +1,9 @@
 package com.example.tubes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,10 +15,12 @@ import com.example.tubes.fragment.FragmentNote;
 import com.example.tubes.fragment.FragmentProfile;
 import com.example.tubes.fragment.FragmentQuiz;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class DashBoard extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
 
     BottomNavigationView bottomNav;
+    FloatingActionButton fab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +30,14 @@ public class DashBoard extends AppCompatActivity implements BottomNavigationView
         bottomNav = findViewById(R.id.bottomNavigationView);
         bottomNav.setBackground(null);
         bottomNav.getMenu().getItem(2).setEnabled(false);
+        fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent detail = new Intent(DashBoard.this, ChatBot.class);
+                startActivity(detail);
+            }
+        });
 
         loadFragment(new FragmentHome());
 // beri listener pada saat item/menu bottomnavigation terpilih

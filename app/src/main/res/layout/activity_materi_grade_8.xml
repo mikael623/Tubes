@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MateriGrade8">
 
     <TextView
@@ -35,22 +36,16 @@
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
     <EditText
-        android:id="@+id/search"
+        android:id="@+id/search8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:background="@drawable/bg_edittext"
-        android:drawableLeft="@drawable/ic_search"
+        android:padding="8dp"
         android:drawablePadding="8dp"
-        android:hint="Search"
+        android:drawableStart="@drawable/ic_search"
         android:layout_marginRight="16dp"
-        android:layout_marginLeft="16dp"
-        android:paddingLeft="16dp"
-        android:paddingTop="8dp"
-        android:paddingBottom="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+        android:layout_marginLeft="16dp" />
 
     <TextView
         android:id="@+id/tV_pilihan"
@@ -70,7 +65,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_list_materi"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:clipToPadding="false"
         android:scrollbarStyle="outsideOverlay"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -78,4 +73,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tV_pilihan" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

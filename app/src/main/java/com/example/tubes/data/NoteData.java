@@ -1,21 +1,16 @@
 package com.example.tubes.data;
 
 public class NoteData {
-    int image;
-    String judul, posted, kelas;
 
-    public NoteData(int image, String judul, String posted, String kelas) {
-        this.image = image;
+    String judul, posted, kelas,image;
+
+    public NoteData() {
+    }
+
+    public NoteData(String judul, String posted, String kelas, String image) {
         this.judul = judul;
         this.posted = posted;
         this.kelas = kelas;
-    }
-
-    public int getImage() {
-        return image;
-    }
-
-    public void setImage(int image) {
         this.image = image;
     }
 
@@ -41,5 +36,13 @@ public class NoteData {
 
     public void setKelas(String kelas) {
         this.kelas = kelas;
+    }
+
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
     }
 }

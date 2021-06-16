@@ -3,6 +3,8 @@ package com.example.tubes;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -27,23 +29,49 @@ public class ListQuiz extends AppCompatActivity {
     private int[] mColors;
     private String[] mCategoryTitles;
     private String[] mCategoryID;
+    private Button kelas7,kelas8, kelas9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        kelas7 = findViewById(R.id.btn_kelas7);
+        kelas8 = findViewById(R.id.btn_kelas8);
+        kelas9 = findViewById(R.id.btn_kelas9);
+
+        kelas7.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ListQuiz.this, KuisKelas7.class));
+            }
+        });
+
+        kelas8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ListQuiz.this, KuisKelas8.class));
+            }
+        });
+
+        kelas9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(ListQuiz.this, KuisKelas9.class));
+            }
+        });
+
 //        setUpCategoryItems();
-        rv_list = findViewById(R.id.rv_list_quiz);
-        rv_list.setHasFixedSize(true);
+//        rv_list = findViewById(R.id.rv_list_quiz);
+//        rv_list.setHasFixedSize(true);
 
-        list.addAll(IsiDataQuiz.getListData());
-        showRecyclerList();
+//        list.addAll(IsiDataQuiz.getListData());
+//        showRecyclerList();
 
-        mCategoryAdapter = new CategoryAdapter(this, mCategoryItems);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(ListQuiz.this, 2, GridLayoutManager.VERTICAL,false);
-        rv_list.setLayoutManager(gridLayoutManager);
-        rv_list.setAdapter(mCategoryAdapter);
+//        mCategoryAdapter = new CategoryAdapter(this, mCategoryItems);
+//        GridLayoutManager gridLayoutManager = new GridLayoutManager(ListQuiz.this, 2, GridLayoutManager.VERTICAL,false);
+//        rv_list.setLayoutManager(gridLayoutManager);
+//        rv_list.setAdapter(mCategoryAdapter);
 
     }
 

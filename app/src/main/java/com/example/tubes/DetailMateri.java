@@ -5,8 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.Html;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.tubes.data.MateriData;
 
 import java.util.ArrayList;
@@ -16,6 +18,7 @@ public class DetailMateri extends AppCompatActivity {
     public static final String EXTRA = "extra";
     private TextView title, deskripsi;
     private List<MateriData> listmateri;
+    private ImageView gambar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +28,7 @@ public class DetailMateri extends AppCompatActivity {
 
         title = findViewById(R.id.judul_materi);
         deskripsi = findViewById(R.id.isi_materi);
+        gambar = findViewById(R.id.imageMateri);
 
         MateriData data = getIntent().getParcelableExtra(EXTRA);
 
@@ -35,5 +39,7 @@ public class DetailMateri extends AppCompatActivity {
             title.setText(Html.fromHtml(data.subjudul));
             deskripsi.setText(Html.fromHtml(data.deskripsi));
         }
+
+//        Glide.with(this).load(data.gambar).into(gambar);
     }
 }

@@ -10,16 +10,18 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
 import com.example.tubes.R;
 import com.example.tubes.data.NoteData;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.myViewHolder> {
     Context context;
-    ArrayList<NoteData> list;
+    List<NoteData> list;
 
-    public NoteAdapter(Context context, ArrayList<NoteData> list) {
+    public NoteAdapter(Context context, List<NoteData> list) {
         this.context = context;
         this.list = list;
     }
@@ -36,7 +38,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.myViewHolder> 
         holder.judul.setText(list.get(position).getJudul());
         holder.posted.setText(list.get(position).getPosted());
         holder.kelas.setText(list.get(position).getKelas());
-        holder.image.setImageResource(list.get(position).getImage());
+        Glide.with(context).load(list.get(position).getImage()).into(holder.image);
     }
 
     @Override

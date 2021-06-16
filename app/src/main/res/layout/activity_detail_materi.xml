@@ -39,8 +39,17 @@
             android:hint="asd"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/judul_materi"
             tools:ignore="MissingConstraints" />
+
+        <ImageView
+            android:id="@+id/imageMateri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/isi_materi" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
