@@ -23,7 +23,7 @@ public class HasilQuiz extends Activity{
 
     public void ulangi(View view){
         finish();
-        Intent a = new Intent(getApplicationContext(),QuestionActivity.class);
-        startActivity(a);
+        Intent i = new Intent(getApplicationContext(),QuestionActivity.class);
+        startActivity(i);
     }
 }

@@ -4,7 +4,7 @@ public class CategoryItem {
     private int image;
     private String Judul;
 
-    public CategoryItem(int image, String judul) {
+    public CategoryItem(int image, String mCategoryTitle, String judul) {
         this.image = image;
         Judul = judul;
     }
@@ -23,5 +23,9 @@ public class CategoryItem {
 
     public void setJudul(String judul) {
         Judul = judul;
+    }
+
+    public int getIsi() {
+        return 0;
     }
 }

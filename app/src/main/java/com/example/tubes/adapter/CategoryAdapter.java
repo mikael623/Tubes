@@ -17,6 +17,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.tubes.QuestionActivity;
 import com.example.tubes.R;
 import com.example.tubes.data.CategoryItem;
+import com.example.tubes.data.QuizData;
 
 import java.util.ArrayList;
 
@@ -43,13 +44,18 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
     @Override
     public void onBindViewHolder(@NonNull CategoryViewHolder holder, int position) {
         holder.categoryTitle.setText(mCategoryItems.get(position).getJudul());
-        holder.categoryImage.setImageResource(mCategoryItems.get(position).getImage());
+        holder.categoryTitle.setText(mCategoryItems.get(position).getIsi());
     }
 
     @Override
     public int getItemCount() {
-        return mCategoryItems.size();
+        return 0;
     }
+
+//    @Override
+//    public int getItemCount() {
+//        return mCategoryItems.size();
+//    }
 
     static class CategoryViewHolder extends RecyclerView.ViewHolder {
         ImageView categoryImage;
