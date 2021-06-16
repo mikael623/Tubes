@@ -10,6 +10,10 @@
     <color name="yellow">#FFE266</color>
     <color name="blue">#247291</color>
     <color name="error">#FF0000</color>
+    <color name="background">#CDD5E0</color>
+    <color name="blue_2">#633DFF</color>
+    <color name="blue_3">#4E709D</color>
+    <color name="orange">#F5B17B</color>
 
     <color name="sampleLight">#13BF9E</color>
 </resources>

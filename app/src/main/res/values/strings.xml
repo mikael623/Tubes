@@ -9,7 +9,7 @@
     <string name="judul">EnterTo Get Lots of\nconvenience for you!</string>
     <string name="forget_password">Forget Password</string>
     <string name="new_user">I’m a new user,</string>
-    <string name="have_user">Don\'t have an email and password yet?</string>
+    <string name="have_user">Already have an account?</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
