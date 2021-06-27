@@ -7,8 +7,6 @@ import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -17,14 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.tubes.DetailMateri;
-import com.example.tubes.JudulMateri;
-import com.example.tubes.Materi;
 import com.example.tubes.R;
 import com.example.tubes.data.MateriData;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class MateriAdapter extends RecyclerView.Adapter<MateriAdapter.myViewHolder> {

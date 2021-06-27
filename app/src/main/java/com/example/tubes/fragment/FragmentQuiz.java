@@ -10,7 +10,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-import com.example.tubes.ListQuiz;
+import com.example.tubes.ListQuiz7;
+import com.example.tubes.ListQuiz8;
+import com.example.tubes.ListQuiz9;
 import com.example.tubes.R;
 
 public class FragmentQuiz extends Fragment {
@@ -19,18 +21,32 @@ public class FragmentQuiz extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_quiz,
                 container, false);
-        Button button = (Button) rootView.findViewById(R.id.btn_quiz);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button button7 = (Button) rootView.findViewById(R.id.btn_kelas7);
+        Button button8 = (Button) rootView.findViewById(R.id.btn_kelas8);
+        Button button9 = (Button) rootView.findViewById(R.id.btn_kelas9);
+        button7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                updateDetail();
+                Intent intent = new Intent(getActivity(), ListQuiz7.class);
+                startActivity(intent);
+            }
+        });
+
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ListQuiz8.class);
+                startActivity(intent);
+            }
+        });
+
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ListQuiz9.class);
+                startActivity(intent);
             }
         });
         return rootView;
-    }
-
-    public void updateDetail() {
-        Intent intent = new Intent(getActivity(), ListQuiz.class);
-        startActivity(intent);
     }
 }

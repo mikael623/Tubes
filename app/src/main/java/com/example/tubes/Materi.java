@@ -58,7 +58,8 @@ public class Materi extends AppCompatActivity {
     //JSON URL =    https://run.mocky.io/v3/9169d365-ef98-45cf-a397-f3ca4b187939
     //or            http://192.168.40.183/database/get_data.php
     //or            http://192.168.40.183/wpu-rest-server/api/materi
-    private static String JSON_URL = "http://IP Address Kalian/database/get_data.php";
+    //TODO : Ubah database dengan IP Address kalian
+    private static String JSON_URL = "http://192.168.40.183/database/get_data.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

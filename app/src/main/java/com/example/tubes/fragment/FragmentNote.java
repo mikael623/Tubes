@@ -40,6 +40,7 @@ public class FragmentNote extends Fragment {
     private List<NoteData> list = new ArrayList();
     private NoteAdapter adapter;
     private Button add_note;
+    //TODO : Ubah database dengan IP Address kalian
     private static String JSON_URL = "http://192.168.40.183/database/get_data_note.php";
     public static final int CONNECTION_TIMEOUT = 10000;
     public static final int READ_TIMEOUT = 15000;

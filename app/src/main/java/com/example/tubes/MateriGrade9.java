@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
 public class MateriGrade9 extends AppCompatActivity {
+    //TODO : Ubah database dengan IP Address kalian
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

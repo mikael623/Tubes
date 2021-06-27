@@ -10,7 +10,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import com.example.tubes.fragment.FragmentHome;
-import com.example.tubes.fragment.FragmentMateri;
 import com.example.tubes.fragment.FragmentNote;
 import com.example.tubes.fragment.FragmentProfile;
 import com.example.tubes.fragment.FragmentQuiz;
