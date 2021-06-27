@@ -11,6 +11,7 @@
     <string name="new_user">I’m a new user,</string>
     <string name="have_user">Already have an account?</string>
     <string name="take_note">&lt;u>Take Note&lt;/u></string>
+    <string name="forget_pass">If you forget your password, you can reset your password by entering your email. we will send a link to your address to change your password</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

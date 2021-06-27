@@ -91,18 +91,18 @@
         android:layout_marginTop="16dp"
         android:layout_marginBottom="10dp"
         android:layout_marginRight="24dp"
-        android:layout_marginLeft="24dp"
+        android:layout_marginLeft="260dp"
         android:orientation="horizontal">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_weight="1"
-            android:layout_height="wrap_content"
-            android:padding="8dp"
-            android:text="your password or email is incorrect!"
-            android:textColor="@color/error"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
+<!--        <TextView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="8dp"-->
+<!--            android:text="your password or email is incorrect!"-->
+<!--            android:textColor="@color/error"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/password" />-->
 
         <TextView
             android:id="@+id/forgetpass"
