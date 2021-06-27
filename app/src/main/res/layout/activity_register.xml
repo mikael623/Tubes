@@ -62,7 +62,7 @@
             android:orientation="vertical">
 
             <EditText
-                android:id="@+id/username"
+                android:id="@+id/et_fullname"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
@@ -79,7 +79,7 @@
                 android:textSize="18sp" />
 
             <EditText
-                android:id="@+id/email"
+                android:id="@+id/et_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
@@ -96,7 +96,7 @@
                 android:textSize="18sp"/>
 
             <EditText
-                android:id="@+id/password"
+                android:id="@+id/et_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="25dp"
@@ -113,7 +113,7 @@
                 android:textSize="18sp"/>
 
             <Button
-                android:id="@+id/register"
+                android:id="@+id/btn_register"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="56dp"
@@ -154,7 +154,7 @@
             android:textColor="@color/black"/>
 
         <TextView
-            android:id="@+id/login"
+            android:id="@+id/tv_halamanlogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="8dp"
