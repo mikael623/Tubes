@@ -56,7 +56,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class NewNote extends AppCompatActivity {
     //TODO : Ubah database dengan IP Address kalian
-    private String JSON_URL = "http://192.168.40.183/database/upload.php";
+    private String JSON_URL = "http://192.168.43.246/database/upload.php";
     private TextInputLayout judul, tipe;
     private ImageView imageNote;
     private Button buttonAdd, uploadImage;

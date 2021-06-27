@@ -43,7 +43,7 @@ public class MateriGrade8 extends AppCompatActivity {
     //or            http://192.168.137.1/database/get_data.php
     //or            http://192.168.40.183/wpu-rest-server/api/materi
     //TODO : Ubah database dengan IP Address kalian
-    private static String JSON_URL = "http://192.168.40.183/database/get_data8.php";
+    private static String JSON_URL = "http://192.168.43.246/database/get_data8.php";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

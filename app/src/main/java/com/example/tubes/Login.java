@@ -45,7 +45,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         forget = findViewById(R.id.forgetpass);
-        email = findViewById(R.id.et_email);
+        email = findViewById(R.id.email);
         pass = findViewById(R.id.password);
         login = findViewById(R.id.btn_login);
         regist = findViewById(R.id.register);
@@ -76,6 +76,9 @@ public class Login extends AppCompatActivity {
         });
     }
 
+//    Coba dulu pee
+
+
     private void initialLogin() {
         String email_user = email.getText().toString();
         final String password_user = pass.getText().toString();
@@ -103,6 +106,8 @@ public class Login extends AppCompatActivity {
                                 JSONObject jsonRESULTS = new JSONObject(response.body().string());
                                 if (jsonRESULTS.getString("success").equals("true")) {
                                     Toast.makeText(mContext, "Berhasil login", Toast.LENGTH_LONG).show();
+                                    startActivity(new Intent(Login.this, DashBoard.class));
+                                    finish();
                                 } else {
                                     String message = jsonRESULTS.getString("message");
                                     Toast.makeText(mContext, message, Toast.LENGTH_LONG).show();

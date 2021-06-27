@@ -61,7 +61,7 @@ public class KuisKelas9 extends AppCompatActivity {
     public static final int CONNECTION_TIMEOUT = 10000;
     public static final int READ_TIMEOUT = 15000;
     //TODO : Ubah database dengan IP Address kalian
-    private static String myURL = "http://192.168.40.183/database/get_data_soalsembilan.php";
+    private static String myURL = "http://192.168.43.246/database/get_data_soalsembilan.php";
     private static final String TAG_DAFTAR = "daftar_soal";
     private static final String TAG_ID = "id";
     private static final String TAG_SOAL = "soal";

@@ -41,8 +41,8 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        mLoading = new ProgressDialog(this);
-        mLoading.setMessage("Please Wait..");
+//        mLoading = new ProgressDialog(this);
+//        mLoading.setMessage("Please Wait..");
         nama = findViewById(R.id.et_fullname);
         email = findViewById(R.id.et_email);
         pass = findViewById(R.id.et_password);
@@ -120,7 +120,7 @@ public class Register extends AppCompatActivity {
                             }
                         } else {
                             Log.i("debug", "onResponse: GAGAL");
-                            mLoading.show();
+//                            mLoading.show();
                         }
                     }
 
